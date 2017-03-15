@@ -1,0 +1,15 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+
+  <edmx:DataServices>
+
+    <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="Test">
+
+      <EntityType Name="TestEntity">
+        <Property Name="TestProperty" Type="Edm.String"/>
+      </EntityType>
+
+    </Schema>
+
+  </edmx:DataServices>
+
+</edmx:Edmx>
