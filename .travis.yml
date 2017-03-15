@@ -22,6 +22,6 @@ before_script:
   - git clone https://github.com/DMTF/Redfish-Tools.git /tmp/Redfish-Tools
 script:
   - npm test
-  - python /tmp/Redfish-Tools/odata-csdl-validator/odata_validator.py 
+  - python3 /tmp/Redfish-Tools/odata-csdl-validator/odata_validator.py 
 after_script:
   - rm -rf /tmp/Redfish-Tools
