@@ -20,15 +20,17 @@ cache:
   - node_modules # NPM packages
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y python3.5
+  #- sudo apt-get install -y python3.5
 before_script:
   - git clone https://github.com/DMTF/Redfish-Tools.git /tmp/Redfish-Tools
 script:
   - npm test
   - which python
   - which python3
+  - which python3.5
   - python -V
   - python3 -V
-  - python3 /tmp/Redfish-Tools/odata-csdl-validator/odata_validator.py 
+  - python3.5 -V
+  - python3.5 /tmp/Redfish-Tools/odata-csdl-validator/odata_validator.py 
 after_script:
   - rm -rf /tmp/Redfish-Tools
