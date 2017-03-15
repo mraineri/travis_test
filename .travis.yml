@@ -1,0 +1,22 @@
+---
+language: node_js
+env:
+  - CXX=g++-4.8
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
+sudo: false
+node_js:
+  - "6.3"
+branches:
+  only:
+    - master
+cache:
+  bundler: true
+  directories:
+  - node_modules # NPM packages
+script:
+  - npm test
