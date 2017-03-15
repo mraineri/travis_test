@@ -10,7 +10,7 @@ addons:
       - g++-4.8
       - python3
 dist: trusty
-sudo: required
+sudo: false
 node_js:
   - "6.3"
 branches:
@@ -24,11 +24,6 @@ before_script:
   - git clone https://github.com/DMTF/Redfish-Tools.git /tmp/Redfish-Tools
 script:
   - npm test
-  - which python
-  - which python3
-  - which python3.5
-  - python -V
-  - python3 -V
-  - python3 /tmp/Redfish-Tools/odata-csdl-validator/odata_validator.py 
+  - python3 /tmp/Redfish-Tools/odata-csdl-validator/odata_validator.py Test_Schema.xml
 after_script:
   - rm -rf /tmp/Redfish-Tools
