@@ -8,6 +8,8 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - g++-4.8
+      - python3
+dist: trusty
 sudo: required
 node_js:
   - "6.3"
@@ -18,9 +20,6 @@ cache:
   bundler: true
   directories:
   - node_modules # NPM packages
-before_install:
-  - sudo apt-get -qq update
-  #- sudo apt-get install -y python3.5
 before_script:
   - git clone https://github.com/DMTF/Redfish-Tools.git /tmp/Redfish-Tools
 script:
@@ -30,8 +29,6 @@ script:
   - which python3.5
   - python -V
   - python3 -V
-  - python3.5 -V
-  - ls /usr/bin
-  - python3.5 /tmp/Redfish-Tools/odata-csdl-validator/odata_validator.py 
+  - python3 /tmp/Redfish-Tools/odata-csdl-validator/odata_validator.py 
 after_script:
   - rm -rf /tmp/Redfish-Tools
