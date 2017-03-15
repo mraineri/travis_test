@@ -24,6 +24,7 @@ before_script:
   - git clone https://github.com/DMTF/Redfish-Tools.git /tmp/Redfish-Tools
 script:
   - npm test
+  - sh test/python_error_test.sh
   - sh test/odata_check.sh
 after_script:
   - rm -rf /tmp/Redfish-Tools
