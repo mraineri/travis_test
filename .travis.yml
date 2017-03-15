@@ -31,6 +31,7 @@ script:
   - python -V
   - python3 -V
   - python3.5 -V
+  - ls /usr/bin
   - python3.5 /tmp/Redfish-Tools/odata-csdl-validator/odata_validator.py 
 after_script:
   - rm -rf /tmp/Redfish-Tools
